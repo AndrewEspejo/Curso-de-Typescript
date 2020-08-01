@@ -19,3 +19,24 @@ let octal = 0o744;
 //Type Boolean
 let isPro;
 isPro = true;
+// isPro = 1; //Error  por tipo
+//Inferido
+let IsUserPro = false;
+IsUserPro = true;
+// IsUserPro = "holi"; //Error por tipo
+//Type String
+//Explicito
+let userName = "AndrewEspejo";
+userName = "jeff";
+// userName = false; //Error tipo de dato string
+//Template String
+//Uso de back-tick
+let userInfo;
+userInfo = `
+	User Info:
+	username: ${userName}
+	firstName: ${userName + "Andres"}
+	phone:${phone}
+	isPro:${isPro}
+`;
+console.log("userInfo", userInfo);
