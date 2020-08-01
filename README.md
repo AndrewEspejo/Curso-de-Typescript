@@ -6,9 +6,9 @@ description: TypeScript course by Platzi
 
 ## ¿Qué es TypeScript?
 
-Es un Lenguaje de Programación de código abierto, basado en JavaScript. TypeScript contiene un superconjunto de métodos, funciones y otras características de JavaScript.
+Es un Lenguaje de Programación de código abierto, basado en JavaScript. TypeScript contiene un superconjunto de métodos, funciones y otras características de JavaScript, tales como la definición de funciones, clases, closures, entre otras.
 
-TypeScript tiene soporte y una sintaxis similar de JavaScript, esto quieres decir que en el código de TypeScript se puede usar código JavaScript sin problemas.
+TypeScript tiene soporte y una sintaxis similar de JavaScript, esto quiere decir que en el código de TypeScript se puede usar código JavaScript sin problemas.
 
 Al estar creado sobre JavaScript, se puede considerar a TypeScript un Lenguaje de Programación de alto nivel, algo que de por si ya lo es JavaScript, a TypeScript también se le define como Superset, esta definición se le aplica a los Lenguajes de Programación que han sido escritos sobre otro Lenguaje de Programación.
 
@@ -278,4 +278,14 @@ Ahora veremos cuáles son los tipos de datos que existen en TypeScript y las opo
 En TypeScript se encuentran definidos ciertos tipos básicos, conocidos también como tipos primitivos con los cuáles es fundamental trabajar en nuestros desarrollos. Entre estos se encuentran:
 
 ![](.gitbook/assets/selection_049.png)
+
+### Number, Boolean and String
+
+![](.gitbook/assets/selection_050.png)
+
+Ahora, veremos en código como podemos definir variables con este tipo de dato:
+
+
+
+
 
