@@ -35,7 +35,7 @@ Gracias a que TypeScript está elaborado apartir de fases fijas y estructurales 
 * Consumir REST APIs
 * Entre muchas otras cosas más.
 
-Muchos proyectos que han sido creados con JavaScript pueden usar tranquilamente TypeScript y funcionar de maravilla.
+En suma a lo anterior, es de amplia relevancia señalar que muchos proyectos que han sido creados con JavaScript pueden usar tranquilamente TypeScript y funcionar de maravilla.
 
 ## Instalación de herramientas
 
@@ -308,6 +308,36 @@ let octal: number = 0o744;
 
 
 ![Tipo Boolean](.gitbook/assets/selection_051.png)
+
+Veamos ahora en código como podemos defnir variables utilizando este tipo de dato:
+
+```typescript
+//Type Boolean
+let isPro: boolean;
+isPro = true;
+// isPro = 1; //Error  por tipo
+
+//Inferido
+let IsUserPro = false;
+IsUserPro = true;
+// IsUserPro = "holi"; //Error por tipo
+
+```
+
+![](.gitbook/assets/selection_053.png)
+
+Veamos ahora en código como podemos defnir variables utilizando este tipo de dato:
+
+```typescript
+//Type String
+//Explicito
+let userName: string = "AndrewEspejo";
+userName = "jeff";
+// userName = false; //Error tipo de dato string
+
+```
+
+![](.gitbook/assets/selection_054.png)
 
 Veamos ahora en código como podemos defnir variables utilizando este tipo de dato:
 
