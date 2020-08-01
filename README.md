@@ -225,5 +225,29 @@ Ahora, procedemos a crear una carpeta denominada src \(sources\) en nuestro proy
 
 ![](.gitbook/assets/selection_043.png)
 
+## Mi primer proyecto TypeScript
+
+En esta sección trabajaremos en nuestro primer proyecto con Typescript. 
+
+Lo primero que haremos será dirigirnos a nuestro archivo `tsconfig.json`, en este buscaremos el parámetro outDir y vamos a personalizar la salida de los diferentes archivos JS para nuestro proyecto
+
+```javascript
+"outDir":"./dist",
+```
+
+Al guardar los cambios en nuestro .JSON, nos dirigimos a la terminar y ejecutamos
+
+```javascript
+tsc
+```
+
+Esto lo que hará es buscar la configuración de nuestro archivo .**JSON**, por lo que creará el directorio dist y dentro de este nuestro archivos compilados **.JS** 
+
+![](.gitbook/assets/selection_044.png)
+
+El siguiente paso consiste en dirigirnos a nuestra terminal y acceder al directorio dist , y ejecutar node para comprobar que nuestro archivo **.JS** genera lo que esperabamos 
+
+![](.gitbook/assets/selection_045.png)
+
 
 
