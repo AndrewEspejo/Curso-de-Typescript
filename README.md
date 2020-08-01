@@ -341,5 +341,47 @@ userName = "jeff";
 
 Veamos ahora en código como podemos defnir variables utilizando este tipo de dato:
 
+```typescript
+//Template String
+//Uso de back-tick
+let userInfo;
+userInfo = `
+	User Info:
+	username: ${userName}
+	firstName: ${userName + "Andres"}
+	phone:${phone}
+	isPro:${isPro}
+`;
+console.log("userInfo", userInfo);
+```
+
+### Any
+
+![](.gitbook/assets/selection_055.png)
+
+Básicamente, **Any** se utiliza en casos muy especificos cuando nuestras variables pueden cambiar de un tipo a otro. Ya vimos que TypeScript es un lenguaje fuertemente tipado, por lo que ante cambios abruptos en el tipo de variables nos saltará un error. 
+
+Para dejarlo más claro, veremos ejemplos de **Any** en código:
+
+```typescript
+//Tipo explicito
+let idUser: any;
+idUser = 1; //type number
+idUser = "1"; //type string
+console.log("idUser", idUser);
+
+//Tipo inferido
+let otherId;
+otherId = 2;
+otherId = "2";
+console.log("otherid", otherId);
+
+let surprise: any = "Hello TypeScript";
+//surprise.sayHello(); //Error
+const res = surprise.substring(6);
+console.log("res", res);
+
+```
+
 
 
