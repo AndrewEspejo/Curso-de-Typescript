@@ -6,7 +6,7 @@ description: TypeScript course by Platzi
 
 ## ¿Qué es TypeScript?
 
-Es un Lenguaje de Programación de código abierto, basado en JavaScript. TypeScript contiene un superconjunto de métodos, funciones y otras características de JavaScript, tales como la definición de funciones, clases, closures, entre otras.
+Es un Lenguaje de Programación de código abierto, basado en JavaScript. TypeScript contiene un superconjunto de métodos, funciones y otras características de JavaScript, tales como las clases, closures, entre otras.
 
 TypeScript tiene soporte y una sintaxis similar de JavaScript, esto quiere decir que en el código de TypeScript se puede usar código JavaScript sin problemas.
 
