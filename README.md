@@ -12,7 +12,7 @@ TypeScript tiene soporte y una sintaxis similar de JavaScript, esto quiere decir
 
 Al estar creado sobre JavaScript, se puede considerar a TypeScript como un lenguaje de programación de alto nivel, cabe mencionar que dicha denominación es esencial de _JavaScript._ Asimismo,TypeScript también se le define como Superset, esta definición se le aplica a los Lenguajes de Programación que han sido escritos sobre otro Lenguaje de Programación.
 
-Actualmente TypeScript es mantenido y soportado por una de las empresas más importantes del ámbito tecnológico, siendo esta  Microsoft.
+Actualmente TypeScript es mantenido y soportado por una de las empresas más importantes del ámbito tecnológico, siendo esta Microsoft.
 
 ## ¿Por qué TypeScript?
 
@@ -79,7 +79,7 @@ tsc -v
 
 Todos nuestros archivos de TypeScript tienen la extensión .TS, estos archivos serán la entrada para nuestro compilador tsc y su salida serán archivos .JS que serán utilizando en los distintos navegadores o en nuestros entornos de ejecución.
 
-Supongamos que tenermos un archivo `Hello.ts`  , para compilador a .JS utilizamos el siguiente comando
+Supongamos que tenermos un archivo `Hello.ts` , para compilador a .JS utilizamos el siguiente comando
 
 ```text
 tsc Hello.ts
@@ -87,7 +87,7 @@ tsc Hello.ts
 
 Como resultado de ejecutar el anterior comando, se generará un archivo con su mismo nombre pero con extensión .JS.
 
-En este punto, es necesario un motor que pueda correr nuestro código JavaScript, en este caso puede ser el motor V8 \(desarrollado por Google\) que viene con Node JS. 
+En este punto, es necesario un motor que pueda correr nuestro código JavaScript, en este caso puede ser el motor V8 \(desarrollado por Google\) que viene con Node JS.
 
 Ahora, pasaremos a realizar lo anterior pero en nuestro IDE.
 
@@ -96,7 +96,7 @@ mkdir typescriptcourse
 code .
 ```
 
-Dentro de nuestro IDE, procedemos a crear el archivo `Hello.ts` 
+Dentro de nuestro IDE, procedemos a crear el archivo `Hello.ts`
 
 ![](.gitbook/assets/selection_038.png)
 
@@ -214,7 +214,6 @@ Como podemos observar, tenemos un "message" único para nuestro archivo de confi
         "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
     }
 }
-
 ```
 
 Una vez creado y configurado nuestro archivo `tsconfig.json,` con la ayuda de tsc podemos definir diferentes usos para tsconfig
@@ -227,7 +226,7 @@ Ahora, procedemos a crear una carpeta denominada src \(sources\) en nuestro proy
 
 ## Mi primer proyecto TypeScript
 
-En esta sección trabajaremos en nuestro primer proyecto con Typescript. 
+En esta sección trabajaremos en nuestro primer proyecto con Typescript.
 
 Lo primero que haremos será dirigirnos a nuestro archivo `tsconfig.json`, en este buscaremos el parámetro outDir y vamos a personalizar la salida de los diferentes archivos JS para nuestro proyecto
 
@@ -241,11 +240,11 @@ Al guardar los cambios en nuestro .JSON, nos dirigimos a la terminar y ejecutamo
 tsc
 ```
 
-Esto lo que hará es buscar la configuración de nuestro archivo .**JSON**, por lo que creará el directorio dist y dentro de este nuestro archivos compilados **.JS** 
+Esto lo que hará es buscar la configuración de nuestro archivo .**JSON**, por lo que creará el directorio dist y dentro de este nuestro archivos compilados **.JS**
 
 ![](.gitbook/assets/selection_044.png)
 
-El siguiente paso consiste en dirigirnos a nuestra terminal y acceder al directorio dist , y ejecutar node para comprobar que nuestro archivo **.JS** genera lo que esperabamos 
+El siguiente paso consiste en dirigirnos a nuestra terminal y acceder al directorio dist , y ejecutar node para comprobar que nuestro archivo **.JS** genera lo que esperabamos
 
 ![](.gitbook/assets/selection_045.png)
 
@@ -255,7 +254,7 @@ Muy bien, ahora crearemos un archivo `main.ts` con el cuál trabajaremos de aqu�
 console.log('Hola Platzi')
 ```
 
-Ahora, en nuestra terminal ejecutamos el comando 
+Ahora, en nuestra terminal ejecutamos el comando
 
 ```typescript
 tsc --watch
@@ -305,8 +304,6 @@ let binary: number = 0b1010;
 let octal: number = 0o744;
 ```
 
-
-
 ![Tipo Boolean](.gitbook/assets/selection_051.png)
 
 Veamos ahora en código como podemos defnir variables utilizando este tipo de dato:
@@ -321,7 +318,6 @@ isPro = true;
 let IsUserPro = false;
 IsUserPro = true;
 // IsUserPro = "holi"; //Error por tipo
-
 ```
 
 ![](.gitbook/assets/selection_053.png)
@@ -334,7 +330,6 @@ Veamos ahora en código como podemos defnir variables utilizando este tipo de da
 let userName: string = "AndrewEspejo";
 userName = "jeff";
 // userName = false; //Error tipo de dato string
-
 ```
 
 ![](.gitbook/assets/selection_054.png)
@@ -346,11 +341,11 @@ Veamos ahora en código como podemos defnir variables utilizando este tipo de da
 //Uso de back-tick
 let userInfo;
 userInfo = `
-	User Info:
-	username: ${userName}
-	firstName: ${userName + "Andres"}
-	phone:${phone}
-	isPro:${isPro}
+    User Info:
+    username: ${userName}
+    firstName: ${userName + "Andres"}
+    phone:${phone}
+    isPro:${isPro}
 `;
 console.log("userInfo", userInfo);
 ```
@@ -359,7 +354,7 @@ console.log("userInfo", userInfo);
 
 ![](.gitbook/assets/selection_055.png)
 
-Básicamente, **Any** se utiliza en casos muy especificos cuando nuestras variables pueden cambiar de un tipo a otro. Ya vimos que TypeScript es un lenguaje fuertemente tipado, por lo que ante cambios abruptos en el tipo de variables nos saltará un error. 
+Básicamente, **Any** se utiliza en casos muy especificos cuando nuestras variables pueden cambiar de un tipo a otro. Ya vimos que TypeScript es un lenguaje fuertemente tipado, por lo que ante cambios abruptos en el tipo de variables nos saltará un error.
 
 Para dejarlo más claro, veremos ejemplos de **Any** en código:
 
@@ -380,8 +375,65 @@ let surprise: any = "Hello TypeScript";
 //surprise.sayHello(); //Error
 const res = surprise.substring(6);
 console.log("res", res);
-
 ```
 
+### Void and never
 
+![](.gitbook/assets/selection_056%20%281%29.png)
+
+```typescript
+//Void
+
+//Tipo explicito
+const showInfo = (user: any) => {
+    console.log("User info", user.id, user.userName, user.firstName);
+    // return "Hola";
+};
+
+showInfo({ id: 1, userName: "JeffEspejo", firstName: "Andres" });
+
+//Tipo inferido
+const showFormattedInfo = (user: any) => {
+    console.log(
+        "User info",
+        `
+	id:${user.id}
+	username:${user.userName}
+	firstname:${user.firstname}`
+    );
+};
+showFormattedInfo({ id: 1, userName: "JeffEspejo", firstName: "Andres" });
+
+//tipo void, como tipo de dato en variable
+let unusable: void;
+unusable = null; //Es necesario deshabilitar el modo estricto para que esto funcione
+unusable = undefined;
+```
+
+![](.gitbook/assets/selection_082%20%281%29.png)
+
+```typescript
+
+//Never
+const handleError = (code: number, message: string): never => {
+    //Process your code  here
+    //Generate a message
+    throw new Error(`${message},code:${code}`);
+};
+try {
+    handleError(404, "not found");
+} catch (error) {}
+
+const sumNumbers = (limit: number): never => {
+    let sum = 0;
+    while (true) {
+        sum++;
+    }
+    //return sum
+};
+
+sumNumbers(10);
+//Ciclo infinit, el programa nunca termina
+
+```
 
