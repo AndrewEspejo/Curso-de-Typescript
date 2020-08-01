@@ -10,9 +10,9 @@ Es un Lenguaje de Programación de código abierto, basado en JavaScript. TypeSc
 
 TypeScript tiene soporte y una sintaxis similar de JavaScript, esto quiere decir que en el código de TypeScript se puede usar código JavaScript sin problemas.
 
-Al estar creado sobre JavaScript, se puede considerar a TypeScript un Lenguaje de Programación de alto nivel, algo que de por si ya lo es JavaScript, a TypeScript también se le define como Superset, esta definición se le aplica a los Lenguajes de Programación que han sido escritos sobre otro Lenguaje de Programación.
+Al estar creado sobre JavaScript, se puede considerar a TypeScript como un lenguaje de programación de alto nivel, cabe mencionar que dicha denominación es esencial de _JavaScript._ Asimismo,TypeScript también se le define como Superset, esta definición se le aplica a los Lenguajes de Programación que han sido escritos sobre otro Lenguaje de Programación.
 
-Actualmente TypeScript es mantenido y soportado por una de las empresas más importantes del ámbito tecnológico, hablo de Microsoft.
+Actualmente TypeScript es mantenido y soportado por una de las empresas más importantes del ámbito tecnológico, siendo esta  Microsoft.
 
 ## ¿Por qué TypeScript?
 
