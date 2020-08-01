@@ -20,7 +20,7 @@ TypeScript mejora la experiencia y la productividad de los desarrolladores. Nos 
 
 ## ¿Qué podemos hacer con TypeScript?
 
-Ya que TypeScript esta hecho con JavaScript, nos permite realizar o ser parte con otras tecnologías en muchos proyectos que JavaScript nos permite, como por ejemplo:
+Gracias a que TypeScript está elaborado apartir de fases fijas y estructurales provenientes de JavaScript, nos permite interactuar, dinamizar y establecer procesos complementarios dentro del desarrollo de proyectos y tecnologías innovadoras, gracias al alcance y potencial de JavaScript, tales como:
 
 * Aplicaciones Móviles \(Ionic, React Native, etc.\)
 * Páginas Web
@@ -285,7 +285,31 @@ En TypeScript se encuentran definidos ciertos tipos básicos, conocidos también
 
 Ahora, veremos en código como podemos definir variables con este tipo de dato:
 
+```typescript
+//Number
+//Explícito
+let phone: number;
+phone = 15;
+phone = 2544;
 
+//Inferido
+let phoneNumber = 2547;
+phoneNumber = 124;
+// phoneNumber=true //Error por tipo
+
+//Hexadecimal
+let hex: number = 0xf00d;
+//Binario
+let binary: number = 0b1010;
+//Octal
+let octal: number = 0o744;
+```
+
+
+
+![Tipo Boolean](.gitbook/assets/selection_051.png)
+
+Veamos ahora en código como podemos defnir variables utilizando este tipo de dato:
 
 
 
