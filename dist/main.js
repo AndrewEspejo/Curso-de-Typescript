@@ -1,4 +1,3 @@
-"use strict";
 // console.log("Web development is my new passion!");
 //Tipos en TypeScript
 //Type Number
