@@ -249,5 +249,33 @@ El siguiente paso consiste en dirigirnos a nuestra terminal y acceder al directo
 
 ![](.gitbook/assets/selection_045.png)
 
+Muy bien, ahora crearemos un archivo `main.ts` con el cuál trabajaremos de aquí en adelante. En este agregaremos un código bastante simple:
 
+```typescript
+console.log('Hola Platzi')
+```
+
+Ahora, en nuestra terminal ejecutamos el comando 
+
+```typescript
+tsc --watch
+```
+
+De modo que compile automaticamente los cambios que hagamos en nuestro archivo `main.ts`
+
+## Tipos en TypeScript
+
+### Tipado en TypeScript
+
+Ahora veremos cuáles son los tipos de datos que existen en TypeScript y las oportunidades que nos ofrecen:
+
+![Tipado en TS](.gitbook/assets/selection_046.png)
+
+![](.gitbook/assets/selection_047.png)
+
+![](.gitbook/assets/selection_048.png)
+
+En TypeScript se encuentran definidos ciertos tipos básicos, conocidos también como tipos primitivos con los cuáles es fundamental trabajar en nuestros desarrollos. Entre estos se encuentran:
+
+![](.gitbook/assets/selection_049.png)
 
