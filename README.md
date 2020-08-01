@@ -6,13 +6,13 @@ description: TypeScript course by Platzi
 
 ## ¿Qué es TypeScript?
 
-Es un Lenguaje de Programación de código abierto, basado en JavaScript. TypeScript contiene un superconjunto de métodos, funciones y otras características de JavaScript.
+Es un Lenguaje de Programación de código abierto, basado en JavaScript. TypeScript contiene un superconjunto de métodos, funciones y otras características de JavaScript, tales como las clases, closures, entre otras.
 
-TypeScript tiene soporte y una sintaxis similar de JavaScript, esto quieres decir que en el código de TypeScript se puede usar código JavaScript sin problemas.
+TypeScript tiene soporte y una sintaxis similar de JavaScript, esto quiere decir que en el código de TypeScript se puede usar código JavaScript sin problemas.
 
-Al estar creado sobre JavaScript, se puede considerar a TypeScript un Lenguaje de Programación de alto nivel, algo que de por si ya lo es JavaScript, a TypeScript también se le define como Superset, esta definición se le aplica a los Lenguajes de Programación que han sido escritos sobre otro Lenguaje de Programación.
+Al estar creado sobre JavaScript, se puede considerar a TypeScript como un lenguaje de programación de alto nivel, cabe mencionar que dicha denominación es esencial de _JavaScript._ Asimismo,TypeScript también se le define como Superset, esta definición se le aplica a los Lenguajes de Programación que han sido escritos sobre otro Lenguaje de Programación.
 
-Actualmente TypeScript es mantenido y soportado por una de las empresas más importantes del ámbito tecnológico, hablo de Microsoft.
+Actualmente TypeScript es mantenido y soportado por una de las empresas más importantes del ámbito tecnológico, siendo esta  Microsoft.
 
 ## ¿Por qué TypeScript?
 
@@ -20,7 +20,7 @@ TypeScript mejora la experiencia y la productividad de los desarrolladores. Nos 
 
 ## ¿Qué podemos hacer con TypeScript?
 
-Ya que TypeScript esta hecho con JavaScript, nos permite realizar o ser parte con otras tecnologías en muchos proyectos que JavaScript nos permite, como por ejemplo:
+Gracias a que TypeScript está elaborado apartir de fases fijas y estructurales provenientes de JavaScript, nos permite interactuar, dinamizar y establecer procesos complementarios dentro del desarrollo de proyectos y tecnologías innovadoras, gracias al alcance y potencial de JavaScript, tales como:
 
 * Aplicaciones Móviles \(Ionic, React Native, etc.\)
 * Páginas Web
@@ -248,6 +248,68 @@ Esto lo que hará es buscar la configuración de nuestro archivo .**JSON**, por 
 El siguiente paso consiste en dirigirnos a nuestra terminal y acceder al directorio dist , y ejecutar node para comprobar que nuestro archivo **.JS** genera lo que esperabamos 
 
 ![](.gitbook/assets/selection_045.png)
+
+Muy bien, ahora crearemos un archivo `main.ts` con el cuál trabajaremos de aquí en adelante. En este agregaremos un código bastante simple:
+
+```typescript
+console.log('Hola Platzi')
+```
+
+Ahora, en nuestra terminal ejecutamos el comando 
+
+```typescript
+tsc --watch
+```
+
+De modo que compile automaticamente los cambios que hagamos en nuestro archivo `main.ts`
+
+## Tipos en TypeScript
+
+### Tipado en TypeScript
+
+Ahora veremos cuáles son los tipos de datos que existen en TypeScript y las oportunidades que nos ofrecen:
+
+![Tipado en TS](.gitbook/assets/selection_046.png)
+
+![](.gitbook/assets/selection_047.png)
+
+![](.gitbook/assets/selection_048.png)
+
+En TypeScript se encuentran definidos ciertos tipos básicos, conocidos también como tipos primitivos con los cuáles es fundamental trabajar en nuestros desarrollos. Entre estos se encuentran:
+
+![](.gitbook/assets/selection_049.png)
+
+### Number, Boolean and String
+
+![](.gitbook/assets/selection_050.png)
+
+Ahora, veremos en código como podemos definir variables con este tipo de dato:
+
+```typescript
+//Number
+//Explícito
+let phone: number;
+phone = 15;
+phone = 2544;
+
+//Inferido
+let phoneNumber = 2547;
+phoneNumber = 124;
+// phoneNumber=true //Error por tipo
+
+//Hexadecimal
+let hex: number = 0xf00d;
+//Binario
+let binary: number = 0b1010;
+//Octal
+let octal: number = 0o744;
+```
+
+
+
+![Tipo Boolean](.gitbook/assets/selection_051.png)
+
+Veamos ahora en código como podemos defnir variables utilizando este tipo de dato:
 
 
 
