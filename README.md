@@ -397,9 +397,9 @@ const showFormattedInfo = (user: any) => {
     console.log(
         "User info",
         `
-	id:${user.id}
-	username:${user.userName}
-	firstname:${user.firstname}`
+    id:${user.id}
+    username:${user.userName}
+    firstname:${user.firstname}`
     );
 };
 showFormattedInfo({ id: 1, userName: "JeffEspejo", firstName: "Andres" });
@@ -413,7 +413,6 @@ unusable = undefined;
 ![](.gitbook/assets/selection_082%20%281%29.png)
 
 ```typescript
-
 //Never
 const handleError = (code: number, message: string): never => {
     //Process your code  here
@@ -434,7 +433,6 @@ const sumNumbers = (limit: number): never => {
 
 sumNumbers(10);
 //Ciclo infinit, el programa nunca termina
-
 ```
 
 ### Null & undefined
@@ -476,7 +474,6 @@ console.log("otherUndefined", otherUndefined);
 let albumName: string;
 albumName = null;
 albumName = undefined;
-
 ```
 
 ![](.gitbook/assets/selection_085.png)
@@ -491,7 +488,6 @@ albumName = undefined;
 let albumName: string;
 // albumName = null;
 // albumName = undefined;
-
 ```
 
 ### Object
@@ -511,7 +507,6 @@ user = {
 };
 console.log('user', user);
 // console.log('user.username', user.username); // --> no se puede acceder al dato username
-
 ```
 
 Aquí encontramos un conflicto, en la siguiente imagen se explica el por qué:
@@ -568,7 +563,6 @@ console.log('users.length : ', users.length); // -> Tamaño del Array
 users.push('aPlatziUser');  // -> agrega dato a la cola del Array
 users.sort();   // --> ordena el Array de menor a mayor (alfabetica)
 console.log('users', users);
-
 ```
 
 ### Tuple
@@ -607,7 +601,6 @@ console.log("array : ", array);
 // lensQueen --> lensQueen001
 array[2][1] = array[2][1].concat("001"); // --> concatena
 console.log("array : ", array);
-
 ```
 
 ### Enum
@@ -667,7 +660,6 @@ enum SecondEnum {
 let testEnum = Object.assign({}, FirstEnum, SecondEnum);
 
 console.log(testEnum); // value 4
-
 ```
 
 ### Unión de Tipos, Alias y Tipos literales
@@ -690,7 +682,6 @@ const getUsernameById = (id: number | string) => {
 
 getUsernameById(20);
 getUsernameById("20");
-
 ```
 
 ![](.gitbook/assets/selection_094.png)
@@ -711,7 +702,6 @@ const getUsernameById = (id: IdUser): Username => {
 
 getUsernameById(20);
 getUsernameById("20");
-
 ```
 
 ![](.gitbook/assets/selection_095.png)
@@ -722,6 +712,41 @@ type SquareSize = "100x100" | "500x500" | "1000x1000";
 let smallPicture: SquareSize = "100x100";
 let mediumPicture: SquareSize = "500x500";
 let bigPicture: SquareSize = "1000x1000";
+```
+
+### Asserts
+
+![](.gitbook/assets/selection_096%20%281%29.png)
+
+```typescript
+// ---------<tipo>// Angle Bracket Syntax-----------
+export {}; //-->variable duplicada
+let username: any;
+username = "JeffEspejo";
+
+//Tenemos una cadena, TS confía en mi!
+let message: string =
+    (<string>username).length > 5
+        ? `Welcome ${username}`
+        : `Username is too short`;
+
+console.log("message", message);
+
+let usernameWithId: any = "AndrewEspejo 25";
+//¿Cómo obtener el username?
+username = (<string>usernameWithId).substring(0, 12);
+console.log("Username only", username);
+
+//---------------Syntaxis "as"-------------
+message =
+    (username as string).length > 5
+        ? `Welcome ${username}`
+        : `Username is too short`;
+
+let helloUser: any;
+helloUser = "Hello Paparazzi";
+username = (helloUser as string).substring(6);
+console.log("username", username);
 
 ```
 
