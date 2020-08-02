@@ -1,4 +1,5 @@
-//-------------Funciones en TS---------------
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 //Usamos TS, definimos tipos para parámetros
 // const createPicture = (title: string, date: string, size: SquareSize) => {
 //     //Se crea la Fotografía
@@ -23,3 +24,20 @@ let createPic = (title, date, size) => {
 };
 const picture = createPic("Platzi Session", "Marzo", "100x100");
 console.log("picture", picture);
+//Tipo de retorno con TypeScript
+const handleError = (code, message) => {
+    //Procesamiento del código, mensaje
+    if (message === "error") {
+        throw new Error(`${message}. Code error: ${code}`);
+    }
+    else {
+        return "An error has occurred";
+    }
+};
+try {
+    let result = handleError(200, "OK"); //String
+    console.log("result", result);
+    result = handleError(404, "error"); //Never
+    console.log("result", result);
+}
+catch (error) { }
