@@ -15,7 +15,7 @@ const showFormattedInfo = (user) => {
 showFormattedInfo({ id: 1, userName: "JeffEspejo", firstName: "Andres" });
 //tipo void, como tipo de dato en variable
 let unusable;
-unusable = null; //Es necesario deshabilitar el modo estricto para que esto funcione
+// unusable = null; //Es necesario deshabilitar el modo estricto para que esto funcione
 unusable = undefined;
 //Never
 const handleError = (code, message) => {

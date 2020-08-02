@@ -22,7 +22,7 @@ showFormattedInfo({ id: 1, userName: "JeffEspejo", firstName: "Andres" });
 
 //tipo void, como tipo de dato en variable
 let unusable: void;
-unusable = null; //Es necesario deshabilitar el modo estricto para que esto funcione
+// unusable = null; //Es necesario deshabilitar el modo estricto para que esto funcione
 unusable = undefined;
 
 //Never
