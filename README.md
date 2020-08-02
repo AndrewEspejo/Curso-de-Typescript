@@ -901,5 +901,120 @@ user.username = "paparazzi";
 console.log("user : ", user);
 ```
 
+### Extendiendo interfaces
 
+![](.gitbook/assets/selection_103.png)
+
+```typescript
+export {};
+
+enum PhotoOrientation {
+    Landscape,
+    Portrait,
+    Square,
+    Panorama,
+}
+interface Entity {
+    id: number;
+    title: string;
+}
+interface Album extends Entity {
+    // copia de los atributos de Entity
+    // id: number;
+    // titulo: string;
+    descripcion: string;
+}
+interface Picture extends Entity {
+    orientation: PhotoOrientation;
+}
+const album: Album = {
+    id: 1,
+    title: "Meetups",
+    descripcion: "Community events around the world",
+};
+const picture: Picture = {
+    id: 1,
+    title: "Family",
+    orientation: PhotoOrientation.Landscape,
+};
+
+let newPicture = {} as Picture;
+newPicture.id = 2;
+newPicture.title = "Moon";
+
+console.log("album : ", album);
+console.log("picture : ", picture);
+console.log("newPicture : ", newPicture);
+
+```
+
+### Clases
+
+![](.gitbook/assets/selection_104.png)
+
+```typescript
+export {};
+console.clear();
+
+enum PhotoOrientation {
+    Landscape = "Landscape",
+    Portrait = "Portrait",
+    Square = "Square",
+    Panorama = "Panorama",
+}
+
+// interface Entity {
+//   id: number;
+//   title: string;
+// }
+
+// class Entity {
+//     id: number;
+//     title: string;
+//   }
+
+class Picture {
+    id: number;
+    title: string;
+    orientation: PhotoOrientation;
+
+    constructor(id: number, title: string, orientation: PhotoOrientation) {
+        this.id = id;
+        this.title = title;
+        this.orientation = orientation;
+    }
+
+    // Comportamiento
+    toString() {
+        return `[id: ${this.id}, title: ${this.title}, orientation: ${this.orientation}]`;
+    }
+}
+
+class Album {
+    id: number;
+    title: string;
+    pictures: Picture[] = [];
+
+    constructor(id: number, title: string) {
+        this.id = id;
+        this.title = title;
+        // this.pictures = [];
+    }
+
+    addPicture(picture: Picture) {
+        this.pictures.push(picture);
+    }
+}
+
+const picture: Picture = new Picture(100, "cool", PhotoOrientation.Square);
+const picture1 = new Picture(201, "korn", PhotoOrientation.Square);
+const album: Album = new Album(534, "Family");
+console.log(picture);
+console.log(picture1);
+album.addPicture(picture);
+album.addPicture(picture1);
+
+console.log("album", album);
+
+```
 
