@@ -4,7 +4,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 // [1, 'user']
 let user; // -> user ya fue declarado en otro archivo
-user = [1, "luixaviles"];
+user = [1, "JeffEspejo"];
 console.log("user : ", user);
 console.log("username : ", user[1]);
 console.log("username.length : ", user[1].length);

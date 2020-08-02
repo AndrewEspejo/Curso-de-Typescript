@@ -5,7 +5,7 @@ export {}; // -> user ya fue declarado en otro archivo
 
 // [1, 'user']
 let user: [number, string]; // -> user ya fue declarado en otro archivo
-user = [1, "luixaviles"];
+user = [1, "JeffEspejo"];
 
 console.log("user : ", user);
 console.log("username : ", user[1]);
